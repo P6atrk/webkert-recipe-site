@@ -2,3 +2,13 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+div, form {
+	display: grid;
+	width: 100%;
+}
+
+table, td, th, tr {
+	align-content: center;
+	align-items: center;
+	width: 100%;
+}

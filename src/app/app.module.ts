@@ -9,23 +9,32 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { environment } from '../environments/environment';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { provideStorage, getStorage } from '@angular/fire/storage';
+import { AngularFireModule } from '@angular/fire/compat';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MenuComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-	MatMenuModule,
-	MatIconModule,
-	MatListModule,
-	MatToolbarModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		MenuComponent
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		MatMenuModule,
+		MatIconModule,
+		MatListModule,
+		MatToolbarModule,
+		AngularFireModule.initializeApp(environment.firebase),
+		provideAuth(() => getAuth()),
+		provideFirestore(() => getFirestore()),
+		provideStorage(() => getStorage())
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

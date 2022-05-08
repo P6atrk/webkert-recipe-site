@@ -1,4 +1,4 @@
-<table mat-table [dataSource]="recipes">
+<table mat-table *ngIf="recipes" [dataSource]="recipes">
 	<ng-container matColumnDef="name">
 		<th mat-header-cell *matHeaderCellDef>Név</th>
 		<td mat-cell *matCellDef="let recipe"> {{recipe.name}} </td>
@@ -11,8 +11,8 @@
 
 	<ng-container matColumnDef="button">
 		<th mat-header-cell *matHeaderCellDef></th>
-		<td mat-cell *matCellDef="">
-			<button mat-raised-button type="button"><mat-icon>forward</mat-icon></button>
+		<td mat-cell *matCellDef="let recipe">
+			<button mat-raised-button type="button" [routerLink]="['/main', recipe.name]"><mat-icon>forward</mat-icon></button>
 		</td>
 	</ng-container>
 

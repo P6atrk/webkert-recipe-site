@@ -16,11 +16,7 @@
 		<mat-icon>app_registration</mat-icon>
 		<span>Regisztráció</span>
 	</button>
-	<button mat-menu-item [routerLink]="'profile'">
-		<mat-icon>person</mat-icon>
-		<span>Profil</span>
-	</button>
-	<button mat-menu-item [routerLink]="'main'">
+	<button mat-menu-item (click)="onLogout()" type="button">
 		<mat-icon>logout</mat-icon>
 		<span>Kijelentkezés</span>
 	</button>

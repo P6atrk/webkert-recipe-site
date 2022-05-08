@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "webkert-recipe-site": {
+      "hosting": {
+        "webkert-recipe-site": [
+          "webkert-recipe-site"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "webkert-recipe-site"
+  }
+}

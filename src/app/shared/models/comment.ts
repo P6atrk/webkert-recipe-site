@@ -1,4 +1,5 @@
 export interface Comment {
-	name: String;
-	comment: String;
+	recipe: string;
+	email: string;
+	comment: string;
 }

@@ -11,7 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
 	declarations: [
-		LoginComponent
+		LoginComponent,
 	],
 	imports: [
 		CommonModule,
@@ -19,7 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 		MatFormFieldModule,
 		MatButtonModule,
 		MatInputModule,
-		ReactiveFormsModule
+		ReactiveFormsModule,
 	]
 })
 export class LoginModule { }

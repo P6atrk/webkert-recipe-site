@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { AuthService } from 'src/app/shared/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-signup',
@@ -9,20 +11,20 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class SignupComponent implements OnInit {
 
 	signupForm = new FormGroup({
-		name: new FormControl(''),
 		email: new FormControl(''),
-		password: new FormControl(''),
-		rePassword: new FormControl(''),
+		password: new FormControl('')
 	});
 
 
-	constructor() { }
+	constructor(private authService: AuthService, private router: Router) { }
 
 	ngOnInit(): void {
 	}
 
 	onSubmit() {
-		console.log("signup")
+		this.authService.signup(this.signupForm.get("email")?.value,this.signupForm.get("password")?.value).then(() => {
+			this.router.navigateByUrl("/main");
+		});
 	}
 
 }

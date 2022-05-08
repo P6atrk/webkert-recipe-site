@@ -4,10 +4,12 @@
 	</mat-card-header>
 
 	<mat-card-content>
+			<h2>Elkészítési idő: {{recipe.time}} perc</h2>
+			<h2>Elkészítés:</h2>
 			<p>{{recipe.description}}</p>
 			<mat-card *ngFor="let comment of comments;">
 				<mat-card-header>
-					<mat-card-title>{{comment.name}}</mat-card-title>
+					<mat-card-title>{{comment.email}}</mat-card-title>
 				</mat-card-header>
 				<mat-card-content>
 					<p>{{comment.comment}}</p>
@@ -15,6 +17,6 @@
 			</mat-card>
 	</mat-card-content>
 	<mat-card-actions>
-		<app-comment></app-comment>
+		<app-comment [recipeInput]="recipe"></app-comment>
 	</mat-card-actions>
 </mat-card>
