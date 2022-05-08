@@ -4,24 +4,24 @@
 	</button>	
 </mat-toolbar>
 <mat-menu #menu>
+	<button mat-menu-item [routerLink]="'main'">
+		<mat-icon>grid_view</mat-icon>
+		<span>Receptek</span>
+	</button>
 	<button mat-menu-item [routerLink]="'login'">
 		<mat-icon>login</mat-icon>
-		<span>Login</span>
+		<span>Bejelentkezés</span>
 	</button>
 	<button mat-menu-item [routerLink]="'signup'">
 		<mat-icon>app_registration</mat-icon>
-		<span>Signup</span>
-	</button>
-	<button mat-menu-item [routerLink]="'main'">
-		<mat-icon>grid_view</mat-icon>
-		<span>Main</span>
+		<span>Regisztráció</span>
 	</button>
 	<button mat-menu-item [routerLink]="'profile'">
 		<mat-icon>person</mat-icon>
-		<span>Profile</span>
+		<span>Profil</span>
 	</button>
 	<button mat-menu-item [routerLink]="'main'">
 		<mat-icon>logout</mat-icon>
-		<span>Logout</span>
+		<span>Kijelentkezés</span>
 	</button>
 </mat-menu>

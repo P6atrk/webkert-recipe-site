@@ -1,1 +1,13 @@
-<p>login works!</p>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+	<mat-form-field>
+		<mat-label for="email">Email cím</mat-label>
+		<input matInput type="text" formControlName="email"/>
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label for="password">Jelszó</mat-label>
+		<input matInput type="password" formControlName="password"/>
+	</mat-form-field>
+	<span>
+		<span><button mat-raised-button color="primary" type="submit">Bejelentkezés</button></span>
+	</span>
+</form>
